@@ -1,0 +1,39 @@
+{
+  "name": "stack",
+  "version": "1.0.0",
+  "description": "Автотесты для демо-сайта Stack-It",
+  "main": "index.js",
+  "scripts": {
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "test:ui": "playwright test --ui",
+    "test:allure": "playwright test --reporter=allure-playwright",
+    "test:debug": "playwright test --debug",
+    "test:district": "playwright test tests/tests/district-management.spec.js",
+    "allure:generate": "allure generate ./allure-results --clean",
+    "allure:open": "allure open ./allure-report",
+    "allure:serve": "allure serve ./allure-results",
+    "allure:clear": "rm -rf allure-results allure-report",
+    "report:playwright": "playwright show-report",
+    "install:browsers": "playwright install",
+    "install:all": "npm install && playwright install"
+  },
+  "keywords": [
+    "playwright",
+    "automation",
+    "testing",
+    "stack-it"
+  ],
+  "author": "Михаил",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@playwright/test": "^1.57.0",
+    "@types/node": "^25.0.3",
+    "allure-commandline": "^2.36.0",
+    "allure-playwright": "^3.4.3"
+  },
+  "dependencies": {
+    "dotenv": "^17.2.3"
+  }
+}
